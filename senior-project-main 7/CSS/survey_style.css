@@ -1,0 +1,88 @@
+/*
+*Formatting the form 
+*/
+form {
+    margin: auto;
+    text-align: center;
+    background-color: rgba(128,128,128,0.8);
+    width: 50%;
+    padding: 2%;
+    border-radius: 10px 10px 10px 10px; 
+    margin-top: 5%;
+}
+/*
+*Submit button styling 
+*/
+input[type=submit] {
+    padding: 2% 2%;
+    font-size: 16px;
+    background-color: #89db52 ; 
+    border:0 none;
+    cursor:pointer;
+    color: white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+#address {
+    width: 45%;
+}
+.form {
+    background-image: url("../pics/Home+Page.jpg");
+    height: 250px;
+    max-width: 90%;
+    min-width: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+input[type=submit]:hover {
+    padding: 2% 2%;
+    color: black ; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+label[for=address] {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+.top-nav-bar-social {
+    float:right;
+    display:block;
+    width:10%;
+    text-align:center;
+    
+}
+.top-nav-bar-social a 
+{
+	float: right;
+    background:#89db52;
+  	color: white;
+  	text-align: right;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 16px;
+    
+    -webkit-border-radius: 5x;
+    border-radius: 5px; 
+}
+.top-nav-bar-social a:hover
+{
+	float: right;
+  	color: black;
+  	text-align: right;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 16px;
+    
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+.navlink {
+    position: absolute;
+    top: 5px;
+    right: 5px;    
+}

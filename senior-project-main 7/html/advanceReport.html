@@ -1,0 +1,74 @@
+{{define "html"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Pull Site Survey Report 
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/report_style.css">
+    </head>
+    <body>
+        <div class="logo">
+            <img class="firstImage" src="pics/iStock-1198055071-uai-2064x1017.jpeg">
+            <h1 class="logoText">RenuLogix</h1>
+        </div>
+        <h1>RenuLogix - Empowering Solar Installers</h1>
+        <h2>Pull Site Surevy Report</h2>
+        <div class="secondHeading">
+            <h4>Address: {{.Address}}</h4>
+            <h4>ReportId: {{.ReportId}}</h4>
+            <img class="image1" src="data:image/png;base64, {{.TopImage}}">
+        </div>
+        
+            <table>  
+                <thead class="firstHead">
+                    <tr>
+                        <th>Roof ID</th>
+                        <th>Total Area</th>
+                        <th>Azimuth</th>
+                        <th>Pitch - in/ft</th>
+                        <th>Pitch - Degree</th>
+                        <th>SAV</th>
+                        <th>TSRF</th>
+                        <th>Annual Sun Hours</th>
+                    </tr> 
+                </thead>
+                <tbody class="firstBody">
+                  
+                    {{range .JsonMes}}
+                    <tr>
+                        <td>{{.Designator}}</td>
+                        <td>{{.Unroundedsize}}</td>
+                        <td>{{.Orientation}}</td>
+                        <td>{{.Pitch}}</td>
+                        <td>{{.PitchDeg}}</td>
+                        <td>{{.Sa}}</td>
+                        <td>{{.Tsrf}}</td>
+                        <td>{{.SunHours}}</td>
+                    </tr>
+                    {{end}}
+                      
+                </tbody>         
+        </table>
+          
+        </div>
+            <ul>
+                <li>Average Annual Sunhours: {{.Ac_annual}} </li>
+                <div class="all">
+                    <div class = "firstRow">
+                        <img class="image1" src = "data:image/png;base64, {{.NorthImage}}" alt = "Blank">
+                        <img class="image2" src = "data:image/png;base64, {{.SouthImage}}" alt = "Blank">
+                    </div>
+                    <div class = "secondRow">
+                        <img class="image3" src = "data:image/png;base64, {{.EastImage}}" alt = "Blank">
+                        <img class="image4" src = "data:image/png;base64, {{.WestImage}}" alt = "Blank">
+                    </div>
+                </div>
+                <p></p>
+                <form action="/reportDisplay" method="POST">
+                    <input type="submit" value="Save Report">
+                </form>
+                
+    </body>
+    </html>
+{{end}}

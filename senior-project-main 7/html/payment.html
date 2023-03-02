@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Place Order For Address 
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/paymentStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="active"><a href="http://localhost:9090/formpage">Status</a></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="/payment" method="POST" onsubmit="validateCard(event);">
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Billing Address</h3>
+                                <label for="fname"><i class="fa fa-user"></i> First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="John" required>
+                                <label for="lname"><i class="fa fa-user"></i> Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Doe" required>
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" onkeydown="validate()"  id="email" name="email" placeholder="john@example.com" required>
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                                <label for="city"><i class="fa fa-institution"></i> City</label>
+                                <input type="text" id="city" name="city" placeholder="New York" required> 
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state" placeholder="NY" required>
+                                    </div>
+                                <div class="col-50">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" id="zip" name="zip"  placeholder="10001" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                                <label for="fname">Accepted Cards</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                            <label for="ccnum">Credit card number</label>
+                            <input type="tel" id="ccnum" name="cardnumber"  inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+                            <label for="expmonth">Exp Month</label>
+                            <input type="number" id="expmonth" name="expmonth" placeholder="04" min="00" max="12" required>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2018" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="dropdown">
+                            <select name="Report Type" id="reportType">
+                                <option value="Advanced">Advanced Report</option>
+                                <option value="Basic" selected>Basic Report</option>
+                            </select>
+                        </div>
+                            <input type="submit" value="Continue to checkout" class="btn">
+                    </form>
+                </div>
+            </div>
+        </div>        
+        <script src="js/validation.js"></script>  
+    </body>
+</html>

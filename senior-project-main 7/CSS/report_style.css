@@ -1,0 +1,181 @@
+html,body
+body 
+{
+    padding:0px;
+    margin:0px;
+}
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+.logoText
+{
+	position: absolute;
+	top: 5%;
+	left: 12%;
+	color: azure;
+	font-size: 200px;
+}
+.logo
+{
+	margin: 0%;
+	padding: 0%;
+	position: relative;
+}
+.firstImage
+{
+	width: 100%;
+	height: 400px;
+	padding:0%;
+	margin:0%;
+}
+p
+{
+	border-bottom: 1px solid grey;
+}
+h1,h2
+{
+	text-align: center;
+	font-style: italic;
+	padding: 0%;
+	margin:0%;
+}
+h1
+{
+	margin-top: 10px;
+}
+.firstHead
+{
+	table-layout: auto;
+}
+.secondHeading
+{
+	text-align: left;
+	font-style: italic;
+	color: black;
+	margin-top: 10px;
+}
+.secondImage
+{
+	border: solid grey;
+	border-radius: 10px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 2px;
+}
+
+table
+{
+	border-collapse: collapse;
+	float: right;
+	height:  400px;
+    display:  block;
+    overflow-y: scroll;
+    width:  700px;
+	margin-right: 20px;
+
+}
+
+table::-webkit-scrollbar{
+	color:  green;
+	width: 10px;
+	height: 10px;
+}
+
+table::-webkit-scrollbar-track {
+	background-color: lightgreen;
+}
+
+table::-webkit-scrollbar-thumb {
+	background-color: green;
+}
+
+td, tr, th
+{
+	text-align: left;
+	width: 65px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: block; 
+}
+
+table tr th, table tr td
+{
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	padding: 5px;
+}
+
+table thead
+{
+	background: green;
+	color: white;
+}
+
+table tr:nth-child(even)
+{
+	background: lightgreen;
+	color: black;
+}
+
+ul
+{
+	list-style-type: none;
+	list-style-position: inside;
+	float: left;
+	padding: 10px;
+	font-size: medium;
+}
+li
+{
+	padding-top: 5px;
+}
+.all
+{
+	display: inline-table;
+	border: 50px solid lightgreen;
+	background-color: white;
+	border-radius: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+.button
+{
+	background: darkgrey;
+	color: white;
+	border-radius: 5px;
+}
+.firstRow
+{
+	height: 20%;
+	width: 100%;
+}
+.secondRow
+{
+	height: 20%;
+	width: 100%;
+}
+.image1, .image3
+{
+	float: left;
+	width: 45%;
+	height: 70%;
+	padding: 10px;
+}
+.image2, .image4
+{
+	float: right; 
+	width: 45%;
+	height: 70%;
+	padding: 10px;
+}
+.button:hover
+{
+	background-color: darkblue;
+}
+
